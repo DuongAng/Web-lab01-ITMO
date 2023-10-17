@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- tự động thích nghi với thiết bị -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon nhỏ bên góc trên thanh tiêu đề -->
+    <link rel="icon" href="img/one.png">
+    <title>Lab01 #1708</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <div class="header__title">
+                    <!-- liên kết với github -->
+                    <a href="https://github.com/VeraKasianenko/Web_programming_SE/tree/main/lab1">Вариант 1708 | Зыонг
+                        Динь Ань | P3207</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title change">Web-programming, Lab #01</h1>
+            <div class="main__row">
+                <!-- khối trái là khối đồ thị -->
+                <div class="main__left-block">
+                    <canvas id="graph"></canvas>
+                    <form class="form" method="get">
+                        <!-- tạo nút X-->
+                        <label class="form__label">X</label>
+                        <div class="form__row" id="x">
+                            <button class="form__x-btn" type="button" value="4">4</button>
+                            <button class="form__x-btn" type="button" value="3">3</button>
+                            <button class="form__x-btn" type="button" value="2">2</button>
+                            <button class="form__x-btn" type="button" value="1">1</button>
+                            <button class="form__x-btn" type="button" value="0">0</button>
+                            <button class="form__x-btn" type="button" value="-1">-1</button>
+                            <button class="form__x-btn" type="button" value="-2">-2</button>
+                            <button class="form__x-btn" type="button" value="-3">-3</button>
+                            <button class="form__x-btn" type="button" value="-4">-4</button>
+                        </div>
+
+                        <!-- tạo ô để điền y -->
+                        <label for="Y" class="form__label">Y</label>
+                        <div class="form__row">
+                            <input id="Y" required class="form__y-input" name="y" placeholder="Input (-5 ... 5)"
+                                   step="any" type="text" value="">
+                        </div>
+
+                        <!-- checkbox để chọn r -->
+                        <label class="form__label">R</label>
+                        <div class="form__row">
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="1">1
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="1.5">1.5
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="2">2
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="2.5">2.5
+                            <input type="checkbox" class="form__r-checkbox" name="r" value="3">3
+                        </div>
+
+                        <!-- in lỗi -->
+                        <p id="error-message"></p>
+
+                        <div class="form__row">
+                            <button class="form__big-btn" disabled type="submit">Submit</button>
+                            <button class="form__big-btn" type="reset">Clear</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- khối bảng hiển thị kết quả sau khi test -->
+                <div class="main__table-block">
+                    <table class="main__table">
+                        <thead>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>R</th>
+                            <th>Time</th>
+                            <th>Work</th>
+                            <th>Result</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer để thêm thông tin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__text">
+                <a class="footer__title" href="https://se.ifmo.ru/courses/web" title="For more information">
+                    Web ITMO
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type='text/javascript' src="js/script.js"></script>
+<script type='text/javascript' src="js/graph.js"></script>
+
+</body>
+</html>
